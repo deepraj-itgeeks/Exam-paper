@@ -1,25 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import Question from './Components/Button/Question';
+import { Route, Routes } from 'react-router-dom';
+import Form from './Components/Form/Form';
+import { useSelector } from 'react-redux';
+import Table from '../src/Components/Table/Table';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const {counter} = useSelector((store)=>store.masterData)
+  
+  return <>
+    <Routes>
+      <Route path='/' element={<Question/>}/>
+       <Route path='/Form' element={<Form/>}/>
+       <Route path='/table' element={<Table state={counter}/>}/>
+    </Routes>
+   
+  </>
 }
 
 export default App;

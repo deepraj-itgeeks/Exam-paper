@@ -1,0 +1,16 @@
+.maindiv{
+    background-color: azure;
+    margin-top: 50px;
+    box-shadow: 0 0 30px gray;
+    border-radius: 10px;
+}
+
+.second{
+    margin-top: -20px;
+}
+.third{
+    margin-top: -20px;
+}
+.four{
+    margin-top: -20px;
+}
