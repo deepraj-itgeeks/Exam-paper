@@ -4,6 +4,7 @@ export default function Table(props) {
     const { state } = props
     return <>
         <div className='container maindiv'>
+        <h4 className='Exampaper'>Exam Paper</h4>
             {state.map((data) => {
                 return <>
                     <div className='container mt-3'>
@@ -19,6 +20,8 @@ export default function Table(props) {
                          
                         <div className='div four' style={{ display: "flex", flexDirection: "row" }}><input type='radio' name='radiobutton' />
                          <p style={{ marginLeft: "10px", marginTop:"15px" }}>D. {data.four}</p></div>
+
+                         <button className='btn btn-success'>Check Answers</button>
 
                     </div>
                 </>

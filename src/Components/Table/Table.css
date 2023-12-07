@@ -5,6 +5,10 @@
     border-radius: 10px;
 }
 
+.Exampaper{
+    margin-left: 450px;
+}
+
 .second{
     margin-top: -20px;
 }
@@ -14,3 +18,12 @@
 .four{
     margin-top: -20px;
 }
+
+@media screen and (min-width: 400px) and (max-width:1000px) {
+     .maindiv{
+        width: 100%;
+     }
+     .Exampaper{
+        margin-left: 200px
+     }
+  }
