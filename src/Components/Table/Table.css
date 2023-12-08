@@ -19,6 +19,11 @@
     margin-top: -20px;
 }
 
+.bottombtn{
+    margin-left: 600px;
+    margin-top: 20px;
+}
+
 @media screen and (min-width: 400px) and (max-width:1000px) {
      .maindiv{
         width: 100%;
