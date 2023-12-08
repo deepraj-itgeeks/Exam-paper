@@ -6,6 +6,7 @@ import Form from './Components/Form/Form';
 import { useSelector } from 'react-redux';
 import Table from '../src/Components/Table/Table';
 import { useEffect } from 'react';
+import Answer from './Components/Answers/Answer';
 
 function App() {
   const {counter} = useSelector((store)=>store.masterData)
@@ -15,6 +16,7 @@ function App() {
       <Route path='/' element={<Question/>}/>
        <Route path='/Form' element={<Form/>}/>
        <Route path='/table' element={<Table state={counter}/>}/>
+       <Route path='/answer' element={<Answer state={counter}/>}/>
     </Routes>
    
   </>

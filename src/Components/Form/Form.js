@@ -30,9 +30,11 @@ export default function Form() {
     var second = input.second;
     var third = input.third;
     var four = input.four
+    var five = input.five
     return <>
         <div className='container mt-5 div1'>
-            <form typeof="submit">
+          <div className='innerdiv'>
+          <form typeof="submit">
                 <div className="form-group">
                     <div className='textinput'>
                         <label className='label1'>Enter Questions</label>
@@ -40,15 +42,17 @@ export default function Form() {
 
                         {
                             selected === "radio" ? <div className='radioinput'>
-                                <div style={{ display: "flex" }}><input type='radio' name='radiobutton' /><input type='text' id='radio' name='first' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
-                                <div style={{ display: "flex" }}><input type='radio' name='radiobutton' /><input type='text' id='radio' name='second' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
-                                <div style={{ display: "flex" }}><input type='radio' name='radiobutton' /><input type='text' id='radio' name='third' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
-                                <div style={{ display: "flex" }}><input type='radio' name='radiobutton' /><input type='text' id='radio' name='four' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='radio' name='radiobutton'  /><input type='text' id='radio' name='first' placeholder='Option'  style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='radio' name='radiobutton'  /><input type='text' id='radio' name='second' placeholder='Option'  style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='radio' name='radiobutton'  /><input type='text' id='radio' name='third' placeholder='Option' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='radio' name='radiobutton'  /><input type='text' id='radio' name='four' placeholder='Option' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='text' id='radio' name='five' placeholder='Answer' style={{ marginLeft: "23px", height: "20px", width: "120px" , marginTop:"10px" }} onInput={Input} /></div>
                             </div> : selected === "checkbox" ? <div className='checkboxinput'>
-                                <div style={{ display: "flex" }}><input type='checkbox' name='checkboxbutton' /><input type='text' id='checkbox' name='first' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
-                                <div style={{ display: "flex" }}><input type='checkbox' name='checkboxbutton' /><input type='text' id='checkbox' name='second' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
-                                <div style={{ display: "flex" }}><input type='checkbox' name='checkboxbutton' /><input type='text' id='checkbox' name='third' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
-                                <div style={{ display: "flex" }}><input type='checkbox' name='checkboxbutton' /><input type='text' id='checkbox' name='four' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='checkbox' name='checkboxbutton' /><input type='text' id='checkbox' placeholder='Option' name='first' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='checkbox' name='checkboxbutton'  /><input type='text' id='checkbox' placeholder='Option' name='second' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='checkbox' name='checkboxbutton'  /><input type='text' id='checkbox' placeholder='Option' name='third' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='checkbox' name='checkboxbutton'  /><input type='text' id='checkbox' placeholder='Option' name='four' style={{ marginLeft: "10px", height: "20px", width: "120px" }} onInput={Input} /></div>
+                                <div style={{ display: "flex" }}><input type='text' id='checkbox' name='five' placeholder='Answer' style={{ marginLeft: "23px", height: "20px", width: "120px", marginTop:"10px" }} onInput={Input} /></div>
                             </div> : ""
                         }
                     </div>
@@ -72,11 +76,15 @@ export default function Form() {
                     input.second == null || input.second === undefined || input.second === "" ||
                     input.third == null || input.third === undefined || input.third === "" ||
                     input.four == null || input.four === undefined || input.four === "" ||
+                    input.five == null || input.five === undefined || input.five === "" ||
                     first === second || first === third || first === four ||
                     second === first || second === third || second === four ||
                     third === first || third === second || third === four ||
-                    four === first || four === second || four === third || question == null || question === undefined || question == "" ? <button disabled={true} className='btn btn-success btn-lg button1' onClick={() => { GoTOStore() }}>submit</button> : <Link to='/table'><button disabled={false} className='btn btn-success btn-lg button1' onClick={() => { GoTOStore() }}>submit</button></Link>
+                    four === first || four === second || four === third ||
+                    question == null || question === undefined || question == "" ? <button disabled={true} className='btn btn-success btn-lg button1' onClick={() => { GoTOStore() }}>submit</button> : <Link to='/table'><button disabled={false} className='btn btn-success btn-lg button1' onClick={() => { GoTOStore() }}>submit</button></Link>
             }
+  
+          </div>
         </div>
     </>
 }
